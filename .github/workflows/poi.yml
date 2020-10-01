@@ -6,8 +6,8 @@ on:
   push:
     branches: [ updatebranch ]
     paths:
-    - 'apis/poi/**'
-    - '!apis/poi/**'
+    - 'apis/poi/web/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
