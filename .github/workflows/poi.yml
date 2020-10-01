@@ -4,9 +4,8 @@ name: Build & Test
 
 on:
   push:
-    branches: [ updatebranch ]
     paths:
-    - 'apis/poi/web/**'
+    - 'apis/poi/web/poi.csproj'
 
 jobs:
   build:
