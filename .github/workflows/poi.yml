@@ -5,7 +5,7 @@ name: Build & Test
 on:
   push:
     paths:
-    - 'apis/poi/web/poi.csproj'
+    - 'apis/poi/**'
 
 jobs:
   build:
