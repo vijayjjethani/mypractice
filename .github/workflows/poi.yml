@@ -5,9 +5,6 @@ name: Build & Test
 on:
   push:
     branches: [ updatebranch ]
-    paths:
-    - 'apis/poi/**'
-    - '!apis/poi/**'
 
 jobs:
   build:
