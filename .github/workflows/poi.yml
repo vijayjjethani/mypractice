@@ -38,7 +38,7 @@ jobs:
         service_principal_password: ${{ secrets.service_principal_password }}
         tenant: ${{ secrets.tenant }}
         registry: ${{ secrets.registry }}
-        repository: ${{ secrets.repository }}:latest
+        repository: ${{ secrets.repository }}
 #        image: poiapi:latest
         folder: apis/poi/web
         dockerfile: Dockerfile  
