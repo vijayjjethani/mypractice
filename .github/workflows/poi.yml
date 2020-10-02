@@ -32,13 +32,13 @@ jobs:
     steps:
     - name: ACR build
       id: acr
-      uses: ams0/acr-task-github-action@master
+      uses: ams0/acr-task-github-action@updatebranch
       with:
         service_principal: ${{ secrets.service_principal }}
         service_principal_password: ${{ secrets.service_principal_password }}
         tenant: ${{ secrets.tenant }}
         registry: ${{ secrets.registry }}
-        repository: ${{ secrets.repository }}
-        image: poi
+#        repository: ${{ secrets.repository }}
+        image: POIAPI:$(Build.BuildId)
         folder: apis/poi/web
         dockerfile: Dockerfile  
