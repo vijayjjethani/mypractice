@@ -39,6 +39,6 @@ jobs:
         tenant: ${{ secrets.tenant }}
         registry: ${{ secrets.registry }}
 #        repository: ${{ secrets.repository }}
-        image: POIAPI
+#        image: poiapi:latest
         folder: apis/poi/web
         dockerfile: Dockerfile  
