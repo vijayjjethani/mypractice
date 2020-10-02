@@ -1,4 +1,4 @@
-Test at 2 oct .
+Test at 2 oct 5pm
 # POI Service
 
 ## Overview
