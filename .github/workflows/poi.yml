@@ -42,18 +42,8 @@ jobs:
         image: poi
         folder: apis/poi/web
         dockerfile: Dockerfile
-  
-  acr_deploy:
-    runs-on: ubuntu-latest
-    needs: acr_build
-    steps:
-    - name: ACR deploy
-      uses: azure/webapps-deploy@v2
-      with:
-        service_principal: ${{ secrets.service_principal }}
-        service_principal_password: ${{ secrets.service_principal_password }}
-        tenant: ${{ secrets.tenant }}
-        registry: ${{ secrets.registry }}
-        repository: ${{ secrets.repository }}  
+        
+    - uses: azure/webapps-deploy@v2
+      with: 
         app-name: 'vijaypoiwebapp'
         images: ${{ secrets.registry }}/ ${{ secrets.repository }}:latest
