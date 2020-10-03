@@ -48,7 +48,7 @@ jobs:
     needs: acr_build
     steps:
     - name: ACR deploy
-    - uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v2
       with:
         app-name: 'vijaypoiwebapp'
         images: ${{ secrets.registry }}/ ${{ secrets.repository }}:latest
