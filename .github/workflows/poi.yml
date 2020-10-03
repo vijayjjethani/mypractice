@@ -50,5 +50,10 @@ jobs:
     - name: ACR deploy
       uses: azure/webapps-deploy@v2
       with:
+        service_principal: ${{ secrets.service_principal }}
+        service_principal_password: ${{ secrets.service_principal_password }}
+        tenant: ${{ secrets.tenant }}
+        registry: ${{ secrets.registry }}
+        repository: ${{ secrets.repository }}  
         app-name: 'vijaypoiwebapp'
         images: ${{ secrets.registry }}/ ${{ secrets.repository }}:latest
